@@ -91,7 +91,7 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imput_text"
+        app:layout_constraintStart_toEndOf="@+id/input_text"
         app:layout_constraintTop_toBottomOf="@+id/number2_text" />
 
     <ImageView
