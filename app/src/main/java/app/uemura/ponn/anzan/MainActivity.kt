@@ -1,6 +1,7 @@
 package app.uemura.ponn.anzan
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -54,6 +55,31 @@ class MainActivity : AppCompatActivity() {
             correctAnswer = randomNumber1 - randomNumber2
         }
 
+        binding.checkButton.setOnClickListener() {
+            //入力された数字を受け取る
+            val yourAnswer = binding.inputText.text.toString()
+
+            //入力された数字が空でないことを確認⇒正誤の確認
+            if (yourAnswer.isNotEmpty()) {
+                //正解・不正解を表示する画面に情報を送る変数を準備
+                val answerPage = Intent(this, AnswerActivity::class.java)
+
+                //問題を文字列で作る
+               val questionText = randomNumber1.toString() + randomNumber2.toString() + "="
+
+                //問題をセットする
+                answerPage.putExtra("question", questionText)
+                //入力された数字をセットする
+                answerPage.putExtra("answer", yourAnswer)
+                //正答をセットする
+                answerPage.putExtra("correct", correctAnswer.toString())
+
+                //判定を表示する画面を起動
+                startActivity(answerPage)
+                //クイズ画面を閉じる
+                finish()
+            }
+        }
 
     }
 }

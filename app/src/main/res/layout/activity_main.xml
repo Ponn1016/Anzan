@@ -58,12 +58,12 @@
         android:text="="
         android:textColor="#ffffff"
         android:textSize="48sp"
-        app:layout_constraintEnd_toStartOf="@id/imput_text"
+        app:layout_constraintEnd_toStartOf="@id/input_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/number1_text" />
 
     <EditText
-        android:id="@+id/imput_text"
+        android:id="@+id/input_text"
         android:layout_width="wrap_content"
         android:layout_height="64dp"
         android:layout_marginStart="16dp"
@@ -101,6 +101,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imput_text"
+        app:layout_constraintTop_toBottomOf="@+id/input_text"
         app:srcCompat="@drawable/randy_normal_image" />
 </androidx.constraintlayout.widget.ConstraintLayout>
